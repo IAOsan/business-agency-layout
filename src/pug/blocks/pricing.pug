@@ -1,0 +1,5 @@
+h2.heading.heading--2.pricing__heading pricing
+.swiper-container.pricing__cardsContainer
+   .pricing__grid.swiper-wrapper
+      each card in pricingCards
+         +pricingCard(card.heading, card.pricing, card.list, card.btn,card.link)

@@ -1,0 +1,76 @@
+@keyframes animateHeading {
+   0% {
+      transform: translateX(-50%) translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 3rem;
+   }
+   3% {
+      transform: translateX(-50%) translateZ(0);
+      opacity: 1;
+      letter-spacing: 1rem;
+   }
+   25% {
+      transform: translateX(-50%) translateZ(0);
+      opacity: 1;
+      letter-spacing: 1rem;
+   }
+   28% {
+      transform: translateX(-50%) translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 2rem;
+   }
+   100% {
+      transform: translateX(-50%) translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 3rem;
+   }
+}
+@include respond(768) {
+   @keyframes animateHeading {
+      0% {
+         transform: translateX(-50%) translateZ(4rem);
+         opacity: 0;
+         letter-spacing: 2rem;
+      }
+      3% {
+         transform: translateX(-50%) translateZ(0);
+         opacity: 1;
+         letter-spacing: 1rem;
+      }
+      25% {
+         transform: translateX(-50%) translateZ(0);
+         opacity: 1;
+         letter-spacing: 1rem;
+      }
+      28% {
+         transform: translateX(-50%) translateZ(4rem);
+         opacity: 0;
+         letter-spacing: 2rem;
+      }
+      100% {
+         transform: translateX(-50%) translateZ(4rem);
+         opacity: 0;
+         letter-spacing: 2rem;
+      }
+   }
+}
+
+@keyframes fade {
+   0% {
+      opacity: 0;
+      visibility: hidden;
+   }
+   100% {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+
+@keyframes showNavbar {
+   0% {
+      top: -100%;
+   }
+   100% {
+      top: 0%;
+   }
+}

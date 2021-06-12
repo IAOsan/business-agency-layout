@@ -1,0 +1,28 @@
+:root {
+   // colors
+   --c-red-l: #9b0e0e;
+   --c-red-d: #7a1010;
+   --c-red-d2: #800505;
+
+   --c-grey-d: #222020;
+   --c-grey-d3: #03070e;
+   --c-grey-d4: #181b1d;
+   --c-grey-d5: #171718;
+
+   --c-free-l: #0da5d3;
+   --c-free-d: #087285;
+   --c-basic-l: #bdba0e;
+   --c-basic-d: #946809;
+   --c-standard-l: #e23b3b;
+   --c-standard-d: #a10c14;
+   --c-premium-l: #3be286;
+   --c-premium-d: #0b7e48;
+
+   // fonts
+   --f-main: 'Baloo Da 2', cursive;
+   --f-display: 'Oswald', sans-serif;
+   // general
+   --transition: all 300ms ease-in-out;
+   --transition-f: all 200ms ease-in-out;
+   --transition-s: all 500ms ease-in-out;
+}

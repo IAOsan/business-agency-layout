@@ -1,0 +1,45 @@
+.form {
+   width: 70rem;
+   margin: 0 auto;
+   margin-bottom: 4rem;
+   @include respond(1400) {
+      width: 65rem;
+   }
+   @include respond(992) {
+      margin: 3rem auto;
+   }
+   @include respond(576) {
+      width: 80%;
+   }
+   &__control {
+      width: 100%;
+      padding: 1.5rem;
+      background-color: #444;
+      color: #eee;
+      border: none;
+      font-family: var(--f-display);
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+      &:not(:last-child) {
+         margin-bottom: 2rem;
+      }
+   }
+   textarea {
+      max-width: 100%;
+   }
+   &__btn {
+      font-family: var(--f-display);
+      width: 100%;
+      border: none;
+      background-color: var(--c-red-d);
+      text-transform: uppercase;
+      padding: 1.5rem;
+      letter-spacing: 0.1rem;
+      transition: var(--transition);
+      color: #fff;
+      &:hover {
+         background-color: #5f0303;
+      }
+   }
+}

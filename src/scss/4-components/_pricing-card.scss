@@ -1,0 +1,167 @@
+.pricingCard {
+   height: 50rem;
+   width: 30rem;
+   background-color: var(--c-grey-d4);
+   color: #fff;
+   box-shadow: 2rem 2rem 6rem rgba($color: #000000, $alpha: 0.7);
+   position: relative;
+   @include respond(992) {
+      height: 45rem;
+      width: 25rem;
+   }
+   &--front,
+   &--back {
+      border-radius: 1rem;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+   }
+
+   &--front {
+      // flexbox
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+   }
+   &__heading {
+      font-size: 2rem;
+      font-weight: 300;
+      width: 100%;
+      height: 5rem;
+      text-transform: uppercase;
+      padding-left: 2rem;
+      padding-top: calc((5rem - 2rem) / 3);
+      &--free {
+         background: linear-gradient(
+            to right,
+            var(--c-free-d),
+            var(--c-free-l)
+         );
+      }
+      &--basic {
+         background: linear-gradient(
+            to right,
+            var(--c-basic-d),
+            var(--c-basic-l)
+         );
+      }
+      &--standard {
+         background: linear-gradient(
+            to right,
+            var(--c-standard-d),
+            var(--c-standard-l)
+         );
+      }
+      &--premium {
+         background: linear-gradient(
+            to right,
+            var(--c-premium-d),
+            var(--c-premium-l)
+         );
+      }
+   }
+   &__price {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7rem;
+      font-weight: bolder;
+   }
+   &__list {
+      list-style-type: none;
+      &--free {
+         color: var(--c-free-l);
+      }
+      &--basic {
+         color: var(--c-basic-l);
+      }
+      &--standard {
+         color: var(--c-standard-l);
+      }
+      &--premium {
+         color: var(--c-premium-l);
+      }
+   }
+   &__item {
+      font-size: 1.8rem;
+      &:not(:last-child) {
+         margin-bottom: 0.5rem;
+      }
+      span {
+         font-size: inherit;
+         font-weight: 300;
+         letter-spacing: 0.1rem;
+      }
+   }
+   &__itemIcon {
+      font-size: inherit;
+      width: 3rem;
+   }
+   &__btn {
+      width: 18rem;
+      height: 5rem;
+      margin-bottom: 3rem;
+      border-radius: 3rem;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      border: none;
+      color: inherit;
+      text-shadow: 0.3rem 0.3rem 0.6rem rgba($color: #000000, $alpha: 0.5);
+      &--free {
+         background-color: #0da5d3;
+      }
+      &--basic {
+         background-color: #bdba0e;
+      }
+      &--standard {
+         background-color: #e23b3b;
+      }
+      &--premium {
+         background-color: #3be286;
+      }
+   }
+   &--back {
+      transform: rotateY(180deg);
+      &Free {
+         background: linear-gradient(
+            to right,
+            var(--c-free-l),
+            var(--c-free-d)
+         );
+      }
+      &Basic {
+         background: linear-gradient(
+            to right,
+            var(--c-basic-l),
+            var(--c-basic-d)
+         );
+      }
+      &Standard {
+         background: linear-gradient(
+            to right,
+            var(--c-standard-l),
+            var(--c-standard-d)
+         );
+      }
+      &Premium {
+         background: linear-gradient(
+            to right,
+            var(--c-premium-l),
+            var(--c-premium-d)
+         );
+      }
+   }
+   &__link {
+      font-size: 2.5rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: capitalize;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+}

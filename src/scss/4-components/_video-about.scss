@@ -1,0 +1,65 @@
+.videoBox {
+   width: 60%;
+   height: 55%;
+   // max-height: 55%;
+   // max-width: 99rem;
+   // max-height: 49rem;
+   box-shadow: 3rem 3rem 3rem rgba($color: #000000, $alpha: 0.7);
+   position: relative;
+   overflow: hidden;
+   @include respond(1400) {
+      height: 50%;
+   }
+   @include respond(992) {
+      margin: 3rem 0;
+      width: 70%;
+   }
+   @include respond(768) {
+      width: 90%;
+   }
+   @include respond(576) {
+      width: 100%;
+   }
+   .videoBox__video {
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      transition: var(--transition);
+   }
+   .videoBox__controls {
+      position: absolute;
+      left: 0;
+      bottom: calc(-100% + (100% - 5.5rem));
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.7);
+      transition: var(--transition-s);
+   }
+   &:hover &__controls {
+      bottom: 0;
+   }
+   .videoBox__barBox {
+      background-color: #000;
+      width: 100%;
+      height: 0.7rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+   .videoBox__bar {
+      background-color: orangered;
+      width: 0;
+      height: 100%;
+      transition: var(--transition);
+   }
+   .videoBox__buttons {
+      padding: 2rem 1rem 1rem 1rem;
+   }
+   .videoBox__btn {
+      background-color: transparent;
+      border: none;
+   }
+   .videoBox__icon {
+      color: #fff;
+      font-size: 2.8rem;
+   }
+}

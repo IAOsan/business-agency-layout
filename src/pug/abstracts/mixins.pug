@@ -1,0 +1,32 @@
+mixin aboutVideo 
+   .videoBox
+      video.videoBox__video
+         source(src="assets/img/About-Us-Video-1.mp4" type='video/mp4')
+         source(src="assets/img/About-Us-Video-1.webm" type='video/webm')
+      .videoBox__controls
+         .videoBox__barBox
+            .videoBox__bar
+         .videoBox__buttons
+            button.btn.videoBox__btn
+               i.far.fa-play-circle.videoBox__icon
+
+mixin pricingCard(heading, pricing, list, btn, link)
+   article.pricingCard.swiper-slide
+      .pricingCard--front
+         h4.pricingCard__heading(class=heading.style) #{heading.title}
+         h3.pricingCard__price $#{pricing}
+         ul.pricingCard__list(class=list.style)
+            each item,index in list.items 
+               li.pricingCard__item 
+                  i.pricingCard__itemIcon(class=item)
+                  span Pricing card item #{index + 1}
+         button.btn.pricingCard__btn(class=btn.style) choose plan 
+      .pricingCard--back(class=link.style)
+         a.pricingCard__link(href="#") Order now
+
+mixin form 
+   form.form.contact__form 
+      input.form__control(type="text", placeholder="Your Name" required)
+      input.form__control(type="email", placeholder="Your Email" required)
+      textarea(class="form__control" placeholder="Your Message")
+      button.btn.form__btn(type="submit") Send Message

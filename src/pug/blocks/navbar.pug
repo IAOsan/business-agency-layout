@@ -1,0 +1,15 @@
+nav.navbar 
+   .navbar__logoBox 
+      a.navbar__logo(href="#") 
+         span C
+         span ode
+         span A
+         span nd
+         span C
+         span reate
+   .navbar__button 
+      span.navbar__icon
+   .navbar__list 
+      each link in navLinks
+         li.navbar__item
+            a.navbar__link(href="#") #{link}

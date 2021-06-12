@@ -1,0 +1,125 @@
+.navbar {
+   width: 100%;
+   height: 8rem;
+   background-color: rgba($color: #000000, $alpha: 0.9);
+   overflow: hidden;
+   position: fixed;
+   top: -100%;
+   left: 0;
+   right: 0;
+   z-index: 20;
+   padding: 1rem 3rem 0 3rem;
+   transition: all 300ms cubic-bezier(0.33, 1, 0.68, 1);
+   animation: showNavbar 2s 1ms forwards;
+   // flex
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+
+   &__logoBox {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      align-self: flex-start;
+      @include respond(576) {
+         font-size: 2rem;
+      }
+   }
+   &__logo {
+      color: #fff;
+      letter-spacing: 0.1rem;
+      text-decoration: none;
+      & span:nth-child(1),
+      & span:nth-child(3),
+      & span:nth-child(5) {
+         font-size: 3.5rem;
+         font-weight: bolder;
+         color: #9e0e09;
+      }
+   }
+   &__button {
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+      align-self: flex-start;
+      margin-top: 1rem;
+   }
+   &__icon {
+      position: relative;
+      top: 1.8rem;
+      height: 3px;
+      &,
+      &::before,
+      &::after {
+         width: 100%;
+         display: block;
+         background-color: goldenrod;
+         transition: var(--transition-s);
+      }
+      &::before,
+      &::after {
+         content: '';
+         height: 2px;
+         position: absolute;
+      }
+      &::before {
+         width: 50%;
+         top: -1rem;
+         left: 0;
+      }
+      &::after {
+         top: 1rem;
+         width: 50%;
+         right: 0;
+      }
+   }
+   &__list {
+      list-style-type: none;
+      flex: 0 0 100%;
+      text-align: center;
+      align-self: flex-start;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-f);
+   }
+   &__item {
+      margin: 2rem 0;
+   }
+   &__link {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+      display: block;
+      text-decoration: none;
+      font-size: 4rem;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 0.3rem;
+      transition: var(--transition);
+      &:hover {
+         color: #9e0e09;
+      }
+   }
+}
+.navbar.navbar--change {
+   height: 100%;
+}
+.navbar--change .navbar__list {
+   opacity: 1;
+   visibility: visible;
+   transition: var(--transition) 350ms;
+}
+.navbar--change .navbar__icon {
+   &::before {
+      top: 0rem;
+      left: 2rem;
+      transform: rotate(-35deg);
+      transform-origin: right;
+   }
+   &::after {
+      top: 0;
+      transform: rotate(35deg);
+      transform-origin: right;
+   }
+}

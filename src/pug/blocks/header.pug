@@ -1,0 +1,7 @@
+.header__textBox 
+   h1.heading.heading--1.header__title
+      each title,index in headerTitles
+         span(class=`header__title--${index + 1}`) #{title}
+   p.header__paragraph Lorem ipsum dolor sit.
+   button.btn.btn--primary.header__btn(type="submit") Discover Now
+      

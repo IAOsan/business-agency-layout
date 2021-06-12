@@ -1,0 +1,32 @@
+.detailBox {
+   flex: 1;
+   margin: 4rem;
+   text-align: center;
+   &__icon {
+      font-size: 5rem;
+      color: #7a1010;
+   }
+   @include respond(768) {
+      &:first-child {
+         margin-left: 0;
+      }
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+   @include respond(992) {
+      margin: 4rem 0;
+   }
+   &__heading {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2.5rem;
+      margin: 2rem 0;
+      color: #ccc;
+      text-transform: uppercase;
+   }
+   &__info {
+      font-size: 1.6rem;
+      color: #aaa;
+      text-transform: capitalize;
+   }
+}
